@@ -35,14 +35,7 @@ console.log(ln); // Wu
 
 ### Destructuring Arrays
 
-```javascript
-const [favor1] = ["baseball", "basketball", "tennis"];
-
-console.log(favor1); // baseball
-```
-
 依照陣列位置, 依序輸入變數值名稱便能取得陣列值
-所以要取得上述陣列所有的值可以這樣使用
 
 ```javascript
 const [favor1, favor2, favor3] = ["baseball", "basketball", "tennis"];
@@ -52,7 +45,7 @@ console.log(favor2); // basketball
 console.log(favor3); // tennis
 ```
 
-若`變數值宣次數超過陣列長度值`, 那麼`超過的變數名稱則為 undefined`
+若`變數值宣告次數超過陣列長度值`, 那麼`超過的變數名稱則為 undefined`
 
 ```javascript
 const [favor1, favor2] = ["baseball"];
