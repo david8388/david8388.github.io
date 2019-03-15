@@ -52,7 +52,7 @@ public class Program
 }
 ```
 
-使用這樣的方式感覺 Code 也更簡潔了
+使用?? operator 的方式感覺更簡單 Code 也更簡潔了
 
 參考資料：
 
