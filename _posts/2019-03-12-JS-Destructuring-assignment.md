@@ -33,6 +33,22 @@ console.log(fn); // David
 console.log(ln); // Wu
 ```
 
+有時再 function 裡會接收多個參數, 可以`將參數組成 Object,再function接受參數值裡解構`
+
+```javascript
+function getParams({ firstName: fn, lastName: ln, gender, city }) {
+  console.log(`${fn}, ${ln}, ${gender}, ${city}`); //* "David, Wu, Male, Taichung"
+}
+
+function getParams_2({ firstName: fn, lastName: ln, ...other }) {
+  console.log(`${fn}, ${ln}, ${gender}, ${other}`); //* "David, Wu, [object Object]"
+  //* 此處的[object Object] 為 {city: "Taichung" gender: "Male"}
+}
+
+getParams(personalInfo);
+getParams_2(personalInfo);
+```
+
 ### Destructuring Arrays
 
 依照陣列位置, 依序輸入變數值名稱便能取得陣列值
