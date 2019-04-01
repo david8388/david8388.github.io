@@ -9,12 +9,12 @@ categories: [Github, Git]
 
 ### Issues and pull requests
 
-- 必須是獨立的 repo，不能是分支
+- 必須是獨立的 repo，不能是 fork
 
 ### Commits
 
 - `commits 使用的 email 帳號必須和 Github 帳號有關`
-- 必須是獨立的 repo，不能是分支
+- 必須是獨立的 repo，不能是 fork
 - commits 必須是在
   - repo 的預設分支上（`通常是 master`）
   - 在 gh-pages 分支(包含 Project Pages sites 的 repo)
@@ -31,7 +31,7 @@ categories: [Github, Git]
 - 可能是 Github 延遲的問題（當 24 小時候後，再看一次）
 - `本地 git email 與 Github 帳號的email 沒有關聯`
 - commits 必須是在 repo 的預設分支上或是在 gh-pages 分支
-- commits 在分支上
+- commits 在 fork 上會無法紀錄 contribution
 
 看到我標紅色的那點了嗎？ 其實我的問題點就在這
 
