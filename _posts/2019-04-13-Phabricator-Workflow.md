@@ -72,7 +72,7 @@ arc set-config default https://test-tppr25itewwg.phacility.com/
 下達git 
 ```bash
 git add .
-git status (確認 REAMDME 是否有加入)
+git status (確認 .arcconfig 是否有加入)
 git commit  -m 'add arcconfig'
 arc diff (reviewers approval後就可以往下執行)
 arc land
