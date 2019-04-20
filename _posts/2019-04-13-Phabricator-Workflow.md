@@ -44,7 +44,6 @@ cd ~/SideProject/phabricator-test
 echo "Hello, phabricator test">> README.md
 git add .
 git status (確認 REAMDME 是否有加入)
-git stash
 git commit -m 'init commit'
 ```
 
@@ -74,7 +73,6 @@ arc set-config default https://test-tppr25itewwg.phacility.com/
 ```bash
 git add .
 git status (確認 REAMDME 是否有加入)
-git stash
 git commit  -m 'add arcconfig'
 arc diff (reviewers approval後就可以往下執行)
 arc land
