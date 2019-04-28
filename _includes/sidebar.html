@@ -7,11 +7,9 @@
   <div class="sidebar-item">
     <div class="sidebar-personal-info">
       <div class="sidebar-personal-info-section">
-        <img src="{{ site.baseurl }}/public/favicon.png" />
-        <!-- <a href="http://gravatar.com/{{ site.author.gravatar }}">
-          <img src="http://www.gravatar.com/avatar/{{ site.author.gravatar }}?s=350" title="View on Gravatar"
-            alt="View on Gravatar" />
-        </a> -->
+        <a href="{{ site.baseurl }}/">
+          <img src="{{ site.baseurl }}/public/favicon.png" />
+        </a>
       </div>
       <div class="sidebar-personal-info-section">
         <p>{{ site.author.description }}</p>
@@ -71,4 +69,17 @@
     {% endfor %}
 
   </nav>
+
+  <br />
+
+  <div>Recent Posts</div>
+  <ul class="list-unstyled">
+    {% for post in site.posts limit:10 %}
+    <li>
+      <span>{{ post.date | date_to_string | slice: 0, 6}}</span> &raquo;
+      <a href="{{ baseurl }}{{ post.url }}">
+        {{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>

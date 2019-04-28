@@ -31,14 +31,12 @@ author:
     
 # Navigation (2nd level links supported)
 nav:
-  Home:
-    - '/'
+  About:
+    - '/about/'
   List:
     - '/list/'
   Categories:
     - '/categories/'
-  About:
-    - '/about/'
 
 # Where are tags and categories displayed
 # tag_page: '/tags/'
