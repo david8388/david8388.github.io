@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Phabricator 工作流程
 date: 2019-04-13 10:10
 categories: [Phabricator, Git]

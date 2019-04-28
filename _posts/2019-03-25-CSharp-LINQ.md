@@ -1,4 +1,5 @@
 ---
+layout: post
 title: C# LINQ
 date: 2019-03-25 20:20
 categories: [Dotnet, CSharp, LINQ]

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Github 為什麼沒有紀錄 contributions
 date: 2019-03-26 22:25
 categories: [Github, Git]

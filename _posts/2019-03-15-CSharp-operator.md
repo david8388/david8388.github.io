@@ -1,4 +1,5 @@
 ---
+layout: post
 title: C# ??運算子
 date: 2019-03-15 22:15
 categories: [Dotnet, CSharp]

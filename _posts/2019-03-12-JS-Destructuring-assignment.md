@@ -1,4 +1,5 @@
 ---
+layout: post
 title: JavaScript 解構賦值
 date: 2019-03-12 15:45
 categories: [JavaScript, ECMAScript]

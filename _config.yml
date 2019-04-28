@@ -1,19 +1,42 @@
-name: David
-author: David
-##baseurl: /david8388.github.io
-description: 全端工程師的學習筆記
-github: https://github.com/david8388
-twitter: http://www.twitter.com/
-facebook: http://www.facebook.com
-linkedin: http://www.linkedin.com
-email: hsienwu830808@gmail.com
+# Site Info
+title: Coding Diary 
+tagline: 'Coding Diary'
+description: 'Coding Diary'
+url: https://david8388.github.io/
+baseurl: ""
 timezone: Asia/Taipei
 disqus: diqus-username
+# logo: '/public/logo.png'
 
-##Make sure to edit the above fields, especially for disqus.
-
-highlighter: rouge
+# Site configurations
+gems:
+  - jekyll-paginate
 markdown: kramdown
+kramdown:
+  input: GFM
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 10
+paginate_path: '/page:num'
+permalink: pretty
+excerpt_separator: "<!-- more -->"
+
+# About/contact
+author:
+  name: David
+  description: '全端工程師的學習筆記'
+  contact:
+    github: https://github.com/david8388
+    
+# Navigation (2nd level links supported)
+nav:
+  Home:
+    - ''
+  Categories:
+    - '/categories/'
+  About:
+    - '/about/'
 
 defaults:
   - scope:
@@ -26,3 +49,17 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# Where are tags and categories displayed
+# tag_page: '/tags/'
+# category_page: '/categories/'
+
+hero:
+  image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
+disqus_short_name: 'your_short_name' # leave blank if you don't want disqus
+
