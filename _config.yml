@@ -32,7 +32,7 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:
-    - ''
+    - '/'
   Categories:
     - '/categories/'
   About:
