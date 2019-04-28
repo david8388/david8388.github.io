@@ -33,22 +33,12 @@ author:
 nav:
   Home:
     - '/'
+  List:
+    - '/list/'
   Categories:
     - '/categories/'
   About:
     - '/about/'
-
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
 
 # Where are tags and categories displayed
 # tag_page: '/tags/'
