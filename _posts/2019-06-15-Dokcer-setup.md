@@ -45,6 +45,56 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
+## 找出所有在運行的 Container
+
+先執行 busy box 這個 image
+
+```shell
+$ docker run busybox ping google.com
+PING google.com (172.217.160.78): 56 data bytes
+64 bytes from 172.217.160.78: seq=0 ttl=37 time=10.463 ms
+.....
+```
+
+`docker ps 找出正在運行的 container`
+
+```shell
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+f963d05ef82b        busybox             "ping google.com"   7 seconds ago       Up 7 seconds                            eloquent_stallman
+
+```
+
+`docker ps -a：取得所有的 container(正在運行或已經結束)`
+
+```shell
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+f963d05ef82b        busybox             "ping google.com"   5 minutes ago       Exited (0) 4 minutes ago                        eloquent_stallman
+4e04afc1d754        busybox             "ls"                6 minutes ago       Exited (0) 6 minutes ago                        goofy_diffie
+b289a5def619        busybox             "ls"                12 minutes ago      Exited (0) 12 minutes ago                       keen_tesla
+e006690afb33        hello-world         "/hello"            13 minutes ago      Exited (0) 13 minutes ago                       hungry_dubinsky
+29356ad8021a        hello-world         "/hello"            24 hours ago        Exited (0) 24 hours ago                         stoic_feistel
+cbb8cb63ff1f        hello-world         "/hello"            24 hours ago        Exited (0) 24 hours ago                         angry_gauss
+
+```
+
+## Container 的 LifeCycle
+
+docker run = docker create + docker start
+
+```shell
+$ docker create hello-world
+009771fd1eab83c70da8587f629fb15a125d2a60a0fab29ba5ac9d72966b0acf
+
+$ docker start -a 009771fd1eab83c70da8587f629fb15a125d2a60a0fab29ba5ac9d72966b0acf
+
+Hello from Docker!
+...
+```
+
+docker start -a，`-a`表示附加所有訊息並且 output 到 terminal 上
+
 參考資料：
 
 -[淺談輕量化的虛擬技術 - Docker 容器](http://www.cc.ntu.edu.tw/chinese/epaper/0036/20160321_3611.html)
