@@ -138,9 +138,13 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ## iTerm2 shortcuts
 
 CMD + T ：新增 tab
+
 CMD + W ：關閉 tab
+
 CMD + R ：清空 command
+
 CMD + Left Arrow ：移置左邊 tab
+
 CMD + Right Arrow ：移置右邊 tab
 
 [iTerm2 shortcuts](https://gist.github.com/squarism/ae3613daf5c01a98ba3a)有提供許多 shortcuts 的 cheat sheet
