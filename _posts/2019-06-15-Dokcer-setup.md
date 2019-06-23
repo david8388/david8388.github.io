@@ -95,8 +95,104 @@ Hello from Docker!
 
 docker start -a，`-a`表示附加所有訊息並且 output 到 terminal 上
 
+## 重啟已經停止的 container
+
+首先啟動 busybox 這個 container
+
+```shell
+$ docker run busybox echo hi there
+hi there
+```
+
+顯示 container 狀態
+
+```shell
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+ca48fa2ca229        busybox             "echo hi there"     46 seconds ago      Exited (0) 45 seconds ago
+```
+
+`找到需要重啟的container ID`，執行`docker start -a targetContainerID`
+
+```shell
+$ docker start -a ca48fa2ca229
+hi there
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+ca48fa2ca229        busybox             "echo hi there"     9 minutes ago       Exited (0) 5 seconds ago
+```
+
+## 移除已經停止的 container
+
+執行時會再確認是否要執行，若確認執行 key y 否則為 N
+
+```shell
+$ docker system prune
+WARNING! This will remove:
+        - all stopped containers
+        - all networks not used by at least one container
+        - all dangling images
+        - all dangling build cache
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+ca48fa2ca229f6cb0d33de1b9475a9825772f532625b27d46cc8d35d40178911
+.....
+```
+
+註：執行完此指令，cache 裡面的 container 就會被移除，也就是需要重新下載 Image 到 local 端
+
+## 取得 Log
+
+可以在執行的時候，透過`docker start -a ContainerID` or `docker run ImageName`，取得 Log
+
+但有可能紀錄已經清掉，就沒辦法拉回去看，這時候可以使用`docker logs containerID`取得 Log
+
+```shell
+$ docker create busybox echo hi there
+cc5219c519b3e2b32055f1c1e520e98ce7bb71cf0c7f097b334a310581c66693
+$ ocker start cc5219c519b3e2b32055f1c1e520e98ce7bb71cf0c7f097b334a310581c66693
+cc5219c519b3e2b32055f1c1e520e98ce7bb71cf0c7f097b334a310581c66693
+$ docker logs cc5219c519b3e2b32055f1c1e520e98ce7bb71cf0c7f097b334a310581c66693
+hi there
+```
+
+## 終止 Container
+
+有兩種方式可以停止 container：
+
+1. docker stop containerId
+2. docker kill containerId
+
+先建立並執行一個 Image
+
+```shell
+$ docker create busybox ping google.com
+ea984dfb57b3ad0a5d12e9378022d7e048c7929c2b6e73f28f8f85f9e108360b
+$ docker start ea984dfb57b3ad0a5d12e9378022d7e048c7929c2b6e73f28f8f85f9e108360b
+ea984dfb57b3ad0a5d12e9378022d7e048c7929c2b6e73f28f8f85f9e108360b
+$ docker logs ea984dfb57b3ad0a5d12e9378022d7e048c7929c2b6e73f28f8f85f9e108360b
+PING google.com (216.58.200.238): 56 data bytes
+64 bytes from 216.58.200.238: seq=1 ttl=37 time=106.250 ms
+...
+```
+
+```shell
+$ docker stop ea984dfb57b3
+ea984dfb57b3
+$ docker kill ea984dfb57b3
+ea984dfb57b3
+```
+
+## `stop vs kill`
+
+stop：會先發送 SIGTERM 的 message，10 秒後在發送 SIGKILL 的 message。Docker 內部應用程序接收 SIGTERM 的 message，做退出前工作，e.g：保存狀態 或 處理當前請求
+
+kill：發送 SIGKILL 的 message，應用程式直接退出
+
 參考資料：
 
 -[淺談輕量化的虛擬技術 - Docker 容器](http://www.cc.ntu.edu.tw/chinese/epaper/0036/20160321_3611.html)
 
 -[初探容器技術(Container)](https://blog.yowko.com/container/)
+
+-[docker stop 与 docker kill 的区别](https://www.cnblogs.com/zhenyuyaodidiao/p/5283593.html)
