@@ -65,6 +65,41 @@ a.move()  //  Walk
 
 而move則是`繼承並在Dog(子類別)覆寫`，所以這裡會執行子類別所執行的程式
 
+### 多型：`不同的類別可以定義相同的方法，這些方法的有效範圍在所屬的類別中`
+
+定義一個Cat的類別並覆寫move這個方法
+
+```javascript
+class Cat extends Animal {
+    constructor(name, age) {
+        super(name, age)
+    }
+
+    move() {
+        console.log('Jump')
+    }
+}
+```
+
+現在同時利用Dog及Cat類別建立兩個實例(Instance)，並且執行move這個方法
+
+```javascript
+const pets = [new Dog('White', 2), new Cat('Yellow', 2)]
+pets.forEach(pet => {
+    pet.move()
+})
+```
+
+雖然是同一個方法，但`執行的方法會是該類別所定義的方法`，所以Cat這個class所建立的實例在執行move的時候就會是Jump，Dog也是一樣的意思
+
+
+印出來的答案如下
+
+```javascript
+Walk
+Jump
+```
+
 參考資料：
 
 - [JavaScript 物件導向介紹](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
