@@ -75,4 +75,4 @@ categories: [MachineLearning]
 
 - [三分鐘了解機器學習的四個學習方式](https://www.ecloudvalley.com/zh-hant/machine-learning/)
 
-- [怎樣教一臺計算機區分貓和狗？一文零基礎入坑機器學習)
+- [怎樣教一臺計算機區分貓和狗？一文零基礎入坑機器學習](http://www.ipshop.xyz/8083.html)
