@@ -5,6 +5,43 @@ date: 2020-02-29 14:10
 categories: [ImageProcessing]
 ---
 
+## 影像基本概念
+
+### 像素
+`數位影像是由一粒一粒的像素(Pixel)所組成`，是組成影像的最小元素，`每張數位影像是由不同顏色的像素所組合而成`，而像素數量越多，越能表現影像細節，而`像素數量越多`，`所佔空間也越大`
+
+如下圖，紅色方框處就是一個像素
+
+![pic](https://i.imgur.com/LTrcuER.png)
+
+### 解析度
+
+如果擁有越多像素，畫面細節則越清楚，可以由下圖理解此原理
+
+![pic](https://upload.wikimedia.org/wikipedia/commons/f/f2/Resolution_illustration.png)
+
+當像素為5x5的時候，圖片是非常不清楚的，但像素越來越多到最右方的100x100的時候，可以清楚地顯示「R」
+
+解析度再螢幕以PPI(Pixel Per Inch)為單位，而印刷以DPI(Dot Per Inch)為單位
+
+## 影像種類
+
+1. 點陣圖：以`像素為基礎`組成影像，能真實呈現影像原貌及色彩差異，`放大後會有鋸齒效果`
+
+2. 向量圖：以`數學算式所繪製成的影像`，圖形放大會重新計算，因此`不會有鋸齒狀`
+
+## 影像色彩類型
+
+1. 黑白：只有`黑、白`兩色，`每個像素大小為1Bit`
+
+2. 灰階：還是`黑、白`色，但有`256種明亮度`，`每個像素大小為1Byte`
+
+3. 256色：最多256種顏色，`每個像素大小為1Byte`
+
+4. 高彩：最多65536種顏色，`每個像素大小為2Byte`
+
+5. 全彩：最多1677萬種顏色，`每個像素大小為3Byte`
+
 ## What is image processing?
 
 影像處理(image processing)，從實體擷取影像，並對影像進行處理、分析、量測與解譯出相關的資訊
@@ -32,6 +69,10 @@ categories: [ImageProcessing]
 5. 辨識與解讀(recognition and interpretation)：給予物體不同標示及意義
 
 參考資料：
+
+- [單元一、影像處理基本概念](http://yuan.yocjh.kh.edu.tw/photoimpact/01.htm)
+
+- [解析度到底是什麼？](https://www.viewsonic.com/tw/pr/content/%E8%A7%A3%E6%9E%90%E5%BA%A6%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E9%BA%BC_7.html)
 
 - [影像處理](https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86)
 
