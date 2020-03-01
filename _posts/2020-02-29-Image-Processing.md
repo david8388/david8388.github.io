@@ -68,6 +68,24 @@ categories: [ImageProcessing]
 
 5. 辨識與解讀(recognition and interpretation)：給予物體不同標示及意義
 
+## 影像預處理方法
+
+1. 影像二值化：影像分割的一種方法，將`影像簡化成只有黑、白`兩種顏色的影像，目的在於
+
+   1-1： `顯示隱藏的特性`，適用於灰階值相近的影像，以`凸顯細節`
+
+   1-2： `去除影像不必要的資訊`，而保留重要的資訊
+
+   首先針對影像中的像素點，設定一個灰階值標準，稱作閥值(Threshold)，轉換規則為
+
+   ![pic](https://smasoft-tech.com/wp-content/uploads/2017/09/%E4%BB%80%E9%BA%BC%E6%98%AF%E5%BD%B1%E5%83%8F%E5%89%8D%E8%99%95%E7%90%86_1.png)
+   
+   `像素點的值大於閥值`，`則轉為白點`
+
+   `像素點的值小於閥值`，`則轉為黑點`
+
+    ![pic](https://smasoft-tech.com/wp-content/uploads/2017/09/%E4%BB%80%E9%BA%BC%E6%98%AF%E5%BD%B1%E5%83%8F%E5%89%8D%E8%99%95%E7%90%86_2.png)
+
 參考資料：
 
 - [單元一、影像處理基本概念](http://yuan.yocjh.kh.edu.tw/photoimpact/01.htm)
